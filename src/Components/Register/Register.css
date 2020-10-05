@@ -1,0 +1,23 @@
+.register-card{
+    height: 460px;
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.input-box{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #CCC;
+    color:black;
+    box-sizing: border-box;
+    width: 450px;
+    margin: 20px 5px;
+}
+.reg-button{
+    background-color: rgb(15, 130, 201);
+    width: 450px;
+    height: 40px;
+    border: none;
+    color: white;
+    
+}

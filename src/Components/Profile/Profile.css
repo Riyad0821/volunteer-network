@@ -1,0 +1,30 @@
+.header-item{
+    font-weight: bold;
+}
+.profile-nav{
+    margin: 50px;
+}
+.activity-container{
+    height: 230px;
+    width: 500px;
+    margin: 10px 60px;
+    display: flex;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: gray;
+}
+.service-img{
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+.cancel-btn{
+    margin-top: 150px;
+    width: 80px;
+}
+.title{
+    padding: 5px;
+    margin-top: 10px;
+}
