@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Header from './Components/Header/Header';
@@ -9,23 +9,36 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import Profile from './Components/Profile/Profile';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+
+export const UserContext = createContext();
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
   return (
-    <div className="body">
-      {/* <Header></Header>
-      <Router>
-        <Switch>
-          <Route path="/home">
-            <Home></Home>
-          </Route>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-        </Switch>
-      </Router> */}
-      <Profile></Profile>
-    </div>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <div className="body">
+        <Router>
+          <Switch>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <Route path="/profile">
+              <Profile></Profile>
+            </Route>
+            <PrivateRoute path="/register/:serviceType">
+              <Register></Register>
+            </PrivateRoute>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+          </Switch>
+        </Router>
+      </div>
+    </UserContext.Provider>
   );
 }
 

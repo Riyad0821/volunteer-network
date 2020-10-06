@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Profile.css';
 import { Form, Nav, Navbar } from 'react-bootstrap';
 import logo from '../../Resource/logos/Group 1329.png';
+import AddedActivity from '../AddedActivity/AddedActivity';
 
 const Profile = () => {
+    const [activities, setActivities] = useState([]);
     return (
         <div>
             <div>
@@ -26,16 +28,8 @@ const Profile = () => {
                 </Form>
             </Navbar>
             </div>
-            <div className="activity-container">
-                <div>
-                <img className="service-img" src={logo} alt=""/>
-                </div>
-                <div>
-                <h3 className="title">Humanity More</h3>
-                </div>
-                <div>
-                    <button className="cancel-btn">Cancel</button>
-                </div>
+            <div>
+                <AddedActivity></AddedActivity>
             </div>
         </div>
     );

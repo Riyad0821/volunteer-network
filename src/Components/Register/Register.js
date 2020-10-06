@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link, useHistory, useParams } from 'react-router-dom';
+import { UserContext } from '../../App';
 import logo from '../../Resource/logos/Group 1329.png';
 import './Register.css'
 
 const Register = () => {
+    const { serviceType } = useParams();
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    // const history = useHistory();
+    // const handleRegister = () => {
+    //     history.pushState(`/profile`);
+    // }
     return (
         <div>
             <div className="logo-container">
@@ -16,13 +24,13 @@ const Register = () => {
             </div>
             <div className="card register-card">
                 <h2 className="bold-text">Register as a Volunteer</h2>
-                <form action="">
-                    <input type="text"  placeholder="Full Name" className="input-box"/>
-                    <input type="text"  placeholder="Username or Email" className="input-box"/>
+                <form action="" >
+                    <input type="text"  value={loggedInUser.name} className="input-box"/>
+                    <input type="text"  value={loggedInUser.email}  className="input-box"/>
                     <input type="text"  placeholder="Date" className="input-box"/>
-                    <input type="text"  placeholder="Dscription" className="input-box"/>
-                    <input type="text"  placeholder="Organize books at the library" className="input-box"/>
-                    <button className="reg-button">Registration</button>
+                    <input type="text"  placeholder="Description" className="input-box"/>
+                    <input type="text"  value={serviceType} className="input-box"/>
+                    <Link to={`/profile`}><button className="reg-button">Registration</button></Link>
                 </form>
             </div>
         </div>

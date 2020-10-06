@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Form, FormControl, InputGroup, Nav, Navbar } from 'react-bootstrap';
+import { Button, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
 import logo from '../../Resource/logos/Group 1329.png';
 
 const Header = () => {
@@ -19,9 +19,9 @@ const Header = () => {
                 </Navbar.Brand>
                 <Form inline className="header-items">
                     <Nav.Link href="home">Home</Nav.Link>
-                    <Nav.Link href="features">Donation</Nav.Link>
-                    <Nav.Link href="pricing">Events</Nav.Link>
-                    <Nav.Link href="blog">Blog</Nav.Link>
+                    <Nav.Link href="login">Donation</Nav.Link>
+                    <Nav.Link href="profile">Events</Nav.Link>
+                    <Nav.Link href="register">Blog</Nav.Link>
                 </Form>
                 <Form inline>
                     <Button className="header-button" type="submit">Register</Button>
