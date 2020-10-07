@@ -3,6 +3,7 @@ import './Header.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
 import logo from '../../Resource/logos/Group 1329.png';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -25,7 +26,7 @@ const Header = () => {
                 </Form>
                 <Form inline>
                     <Button className="header-button" type="submit">Register</Button>
-                    <Button className="header-button" variant="dark" type="submit">Admin</Button>
+                    <Link to="/admin"><Button className="header-button" variant="dark" type="submit">Admin</Button></Link>
                 </Form>
             </Navbar>
             <div className="below-navbar ">

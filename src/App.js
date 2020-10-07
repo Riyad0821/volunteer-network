@@ -9,7 +9,9 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import Profile from './Components/Profile/Profile';
+import AddItems from './Components/AddItems/AddItems';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import Admin from './Components/Admin/Admin';
 
 export const UserContext = createContext();
 
@@ -31,6 +33,12 @@ function App() {
             </PrivateRoute>
             <Route path="/login">
               <Login></Login>
+            </Route>
+            <Route path="/addItem">
+              <AddItems></AddItems>
+            </Route>
+            <Route path="/admin">
+              <Admin></Admin>
             </Route>
             <Route exact path="/">
               <Home></Home>

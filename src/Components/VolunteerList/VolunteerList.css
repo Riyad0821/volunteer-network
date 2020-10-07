@@ -1,0 +1,22 @@
+.label{
+    margin-bottom: 30px;
+}
+.list-container{
+    width: 800px;
+    display: flex;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+.list-label{
+    display: flex;
+    flex: 5;
+}
+.margin{
+    margin:0 35px;
+}
+.margin-email{
+    margin-left: 80px;
+}
+.margin-rd{
+    margin-left: 120px;
+}

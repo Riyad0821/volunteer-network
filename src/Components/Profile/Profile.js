@@ -6,6 +6,8 @@ import AddedActivity from '../AddedActivity/AddedActivity';
 
 const Profile = () => {
     const [activities, setActivities] = useState([]);
+    const [loggedInUser, setLoggedInUser] = useState({});
+    
     return (
         <div>
             <div>

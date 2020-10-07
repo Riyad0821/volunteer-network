@@ -1,0 +1,19 @@
+.lists{
+    display: flex;
+    flex: 5;
+    margin: 20px 0px;
+}
+.list-element{
+    margin:0px 25px;
+}
+.del-logo{
+    height: 20px;
+    
+}
+.delete-btn{
+    background-color: white;
+    border:1px solid red;
+    border-radius: 5px;
+}
+
+
