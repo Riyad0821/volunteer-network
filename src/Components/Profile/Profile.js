@@ -1,12 +1,22 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Profile.css';
 import { Form, Nav, Navbar } from 'react-bootstrap';
 import logo from '../../Resource/logos/Group 1329.png';
 import AddedActivity from '../AddedActivity/AddedActivity';
+import {  UserContext } from '../../App';
 
 const Profile = () => {
-    const [activities, setActivities] = useState([]);
-    const [loggedInUser, setLoggedInUser] = useState({});
+    const [ enrolled, setEnrolled] = useState([]);
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/profile?email=' + loggedInUser.email)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            setEnrolled(data);
+        })
+    }, [])
     
     return (
         <div>
@@ -30,8 +40,10 @@ const Profile = () => {
                 </Form>
             </Navbar>
             </div>
-            <div>
-                <AddedActivity></AddedActivity>
+            <div className="service-list">
+                {
+                    enrolled.map(enrolled => <AddedActivity enrolled={enrolled} key={enrolled._id}></AddedActivity>)
+                }
             </div>
         </div>
     );

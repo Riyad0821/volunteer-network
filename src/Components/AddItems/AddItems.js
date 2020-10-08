@@ -7,7 +7,7 @@ const AddItems = () => {
     const { register, handleSubmit, watch, errors } = useForm();
 
     const onSubmit = data => {
-        const eventDetails = {data};
+        const eventDetails = {...data};
         fetch('http://localhost:5000/addEvent', {
             method: 'POST',
             headers: {
@@ -45,13 +45,17 @@ const AddItems = () => {
                     {errors.name && <span className="error">Event title is required</span>}
                     {/* <label className="des-label" htmlFor="">Description</label> */}
                     <h6 className="des-label">Description</h6>
-                    <input name="Description" className="des-box" ref={register({ required: true })} placeholder="Enter description" />
+                    <input name="description" className="des-box" ref={register({ required: true })} placeholder="Enter description" />
                     {errors.name && <span className="error">Description is required</span>}
                 </div>
                 <div>
                     <h6 className="des-label">Date</h6>
-                    <input name="Date" className="input-block date-block" ref={register({ required: true })} placeholder="Enter date" />
+                    <input name="date" className="input-block date-block" ref={register({ required: true })} placeholder="Enter date" />
                     {errors.name && <span className="error">Description is required</span>}
+                    <input name="bgColor" className="input-block extra" ref={register({ required: true })} defaultValue="blue" placeholder="color" />
+                    {errors.name && <span className="error">Color is required</span>}
+                    <input name="img" className="input-block extra" ref={register({ required: true })} defaultValue="https://i.imgur.com/TiHwVp2.png" />
+                    {errors.name && <span className="error">Color is required</span>}
                 </div>
             </div>
             <input type="submit" className="submit-btn"/>

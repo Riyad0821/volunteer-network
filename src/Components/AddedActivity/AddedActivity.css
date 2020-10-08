@@ -1,11 +1,11 @@
 .activity-container{
     height: 200px;
     width: 500px;
-    margin: 10px 60px;
+    margin: 10px auto;
     display: flex;
-    border: 1px solid gray;
+    border: 0px;
     border-radius: 10px;
-    background-color: lightgreen;
+    background-color: white;
 }
 .service-img{
     height: 150px;
@@ -15,10 +15,21 @@
     border-radius: 10px;
 }
 .cancel-btn{
-    margin-top: 150px;
     width: 80px;
+    height: 40px;
+    background-color: rgb(235, 226, 226);
+    border-radius: 5px;
+    border: 0px;
+    position: relative;
+    margin-top: 150px;
+    margin-right: 10px;
+    color: gray;
 }
 .title{
     padding: 5px;
     margin-top: 10px;
+}
+.title-date{
+    width: 250px;
+    height: 150px;
 }

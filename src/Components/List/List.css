@@ -2,9 +2,22 @@
     display: flex;
     flex: 5;
     margin: 20px 0px;
+    background-color: white;
+    height: 60px;
+    padding: 10px;
+    border-radius: 10px;
 }
-.list-element{
-    margin:0px 25px;
+.list-name{
+    width: 150px;
+}
+.list-email{
+    width: 250px;
+}
+.list-date{
+    width: 130px;
+}
+.list-type{
+    width: 200px;
 }
 .del-logo{
     height: 20px;
@@ -14,6 +27,7 @@
     background-color: white;
     border:1px solid red;
     border-radius: 5px;
+    height: 30px;
 }
 
 

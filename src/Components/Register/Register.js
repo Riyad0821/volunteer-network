@@ -6,11 +6,13 @@ import logo from '../../Resource/logos/Group 1329.png';
 import './Register.css'
 
 const Register = () => {
+    const history = useHistory();
     const { serviceType } = useParams();
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const { register, handleSubmit, watch, errors } = useForm();
-    const onSubmit = data => {
-        const registrationDetails = {data};
+    const onSubmit = (data) => {
+        console.log(data);
+        const registrationDetails = {...data};
         fetch('http://localhost:5000/addRegistration', {
             method: 'POST',
             headers: {
@@ -22,7 +24,7 @@ const Register = () => {
         .then(data => {
             if(data){
                 alert('Registration completed successfully!');
-                window.location.href = "/profile";
+                history.push('/profile');
             }
         })
     };

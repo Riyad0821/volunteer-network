@@ -1,15 +1,15 @@
 .cardd{
-    height:400px;
+    height:382px;
     width: 300px;
-    border: 0px solid white;
+    border: 1px solid gray;
     background-repeat: no-repeat;
     background-size:100%;
     color: white;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 15px;
     padding-top: 300px;
     text-align: center;
-    margin:0px 10px;
+    margin:10px 10px;
 }
 .item-title{
     height: 80px;
