@@ -1,15 +1,34 @@
 import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import List from '../List/List';
 import './VolunteerList.css'
 
 const VolunteerList = () => {
+    const history = useHistory();
     const [list, setList] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/lists')
+        fetch('https://fast-brushlands-49939.herokuapp.com/lists')
             .then(res => res.json())
             .then(data => setList(data))
     }, [])
+
+    function handleRemoveUser(id){
+        fetch('https://fast-brushlands-49939.herokuapp.com/admin?_id=' + id, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(res => res.json())
+        .then(result => {
+            if(result){
+                alert('Deleted successfully!');
+                history.push('/admin');
+                
+            }
+        })
+    }
 
     return (
         <div >
@@ -26,7 +45,7 @@ const VolunteerList = () => {
             </div>
             <div>
             {
-                list.map(item => <List item={item} key={item._id}> </List>)
+                list.map(item => <List handleRemoveUser={handleRemoveUser} item={item} key={item._id}> </List>)
             }
             </div>
         </div>

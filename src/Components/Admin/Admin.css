@@ -18,3 +18,10 @@
     margin-bottom: 10px;
     
 }
+.ref-btn{
+    height: 40px;
+    width: 100px;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+}

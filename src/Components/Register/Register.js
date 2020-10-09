@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link, useHistory, useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { UserContext } from '../../App';
 import logo from '../../Resource/logos/Group 1329.png';
 import './Register.css'
@@ -13,7 +13,7 @@ const Register = () => {
     const onSubmit = (data) => {
         console.log(data);
         const registrationDetails = {...data};
-        fetch('http://localhost:5000/addRegistration', {
+        fetch('https://fast-brushlands-49939.herokuapp.com/addRegistration', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -1,14 +1,13 @@
 import React from 'react';
 import './AddItems.css';
-import fakeData from '../../fakeData/Items'
 import { useForm } from 'react-hook-form';
 
 const AddItems = () => {
-    const { register, handleSubmit, watch, errors } = useForm();
+    const { register, handleSubmit, errors } = useForm();
 
     const onSubmit = data => {
         const eventDetails = {...data};
-        fetch('http://localhost:5000/addEvent', {
+        fetch('https://fast-brushlands-49939.herokuapp.com/addEvent', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -27,7 +26,7 @@ const AddItems = () => {
 
     // const product = {};
     // const handleAddProduct = () => {
-    //     fetch('http://localhost:5000/addActivity', {
+    //     fetch('https://fast-brushlands-49939.herokuapp.com/addActivity', {
     //         method: 'POST',
     //         headers: {
     //             'Content-Type': 'application/json'

@@ -3,7 +3,7 @@ import logo from '../../Resource/images/extraVolunteer.png';
 import './AddedActivity.css'
 
 const AddedActivity = (props) => {
-    const { serviceType, date} = props.enrolled;
+    const { serviceType, date, _id} = props.enrolled;
 
     return (
             <div className="activity-container">
@@ -15,7 +15,7 @@ const AddedActivity = (props) => {
                 <h5 className="title"> {date}</h5>
                 </div>
                 <div>
-                    <button className="cancel-btn">Cancel</button>
+                    <button onClick={() => props.handleRemoveEvent(_id)} className="cancel-btn">Cancel</button>
                 </div>
             </div>
     );
