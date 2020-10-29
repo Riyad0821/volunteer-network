@@ -1,5 +1,37 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Volunteer Network
+An application used to provide volunteer services based on social need.
+## [Live Website] (https://volunteer-network-56677.web.app/)
+
+## Project Status
+This project is currently in development. This website is a hub of volunteers for a lot of services. Functionality to sort by additional parameters is in progress.
+
+## Features
+* Responsive single-page web app of the volunteer management system
+* Authorization for volunteers and admin panel
+* A volunteer can choose social service based on interests
+* Volunteer can register himself/herself with proper info
+* Admin can add events, launch new events, and keep track of progress
+
+## Using Technologies and libraries
+1. React.js
+2. Bootstrap
+3. Firebase Authorization
+4. Firebase Hosting
+5. Heroku Hosting
+3. React-bootstrap
+4. React-router
+5. Reactstrap
+6. React split pane
+7. React-responsive-carousel
+8. React-font-awesome
+9. React-hook
+10. etc
+
+## Project Screen Shot(s)
+![Landing Page](https://user-images.githubusercontent.com/33195510/97538738-1aa59400-19eb-11eb-825f-b4aaa7ab2ebb.PNG)
+
 ## Available Scripts
 
 In the project directory, you can run:
