@@ -20,11 +20,8 @@ This project is currently in development. This website is a hub of volunteers fo
 3. Firebase Authorization
 4. Firebase Hosting
 5. Heroku Hosting
-3. React-bootstrap
-4. React-router
-5. Reactstrap
-6. React split pane
-7. React-responsive-carousel
+6. React-bootstrap
+7. React-router
 8. React-font-awesome
 9. React-hook
 10. etc
